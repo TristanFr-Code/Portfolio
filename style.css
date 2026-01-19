@@ -1,0 +1,570 @@
+/* --- POLICES --- */
+@font-face {
+    font-family: 'Frutiger';
+    src: url('https://fonts.cdnfonts.com/s/14749/Frutiger.woff') format('woff');
+    /* Fallback si Frutiger ne charge pas */
+}
+
+:root {
+    --glass-border: rgba(255, 255, 255, 0.7);
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --aero-blue: #00A4EF;
+    --aero-green: #87C934;
+    --text-main: #003355;
+    --text-light: #ffffff;
+    --blur-strength: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Frutiger", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-main);
+    overflow-x: hidden;
+    background-color: #f0f8ff;
+}
+
+/* FOND D'ÉCRAN FRUTIGER AERO */
+.frutiger-bg {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%), url('assets/bg-frutiger.png');
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* --- LE LIQUID HEADER --- */
+header {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.glass-bar {
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(var(--blur-strength));
+    -webkit-backdrop-filter: blur(var(--blur-strength));
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-top: 2px solid rgba(255, 255, 255, 1);
+    /* Highlight top */
+    padding: 12px 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow:
+        0 8px 32px 0 rgba(31, 38, 135, 0.2),
+        inset 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.glass-bar:hover {
+    box-shadow:
+        0 12px 48px 0 rgba(31, 38, 135, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: var(--text-main);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    letter-spacing: -0.5px;
+}
+
+.logo .highlight {
+    color: var(--aero-blue);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    transition: 0.3s;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--aero-blue);
+    box-shadow: 0 2px 10px rgba(0, 164, 239, 0.2);
+}
+
+/* --- CONTENEUR PRINCIPAL --- */
+.container {
+    max-width: 1100px;
+    margin: 120px auto 0;
+    padding: 20px;
+}
+
+/* --- PANNEAUX DE VERRE (GLASSMORPHISM) --- */
+.glass-panel {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glossy Shine Effect */
+.glass-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 23px 23px 100% 100% / 20px;
+    pointer-events: none;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.glass-panel>* {
+    position: relative;
+    /* Ensure content is above shine */
+    z-index: 2;
+}
+
+/* --- BOUTONS STYLE FRUTIGER AERO --- */
+.aero-btn {
+    background: linear-gradient(180deg, #66ccff 0%, #0066cc 100%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    padding: 14px 35px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.aero-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), transparent);
+    border-radius: 30px 30px 60% 60%;
+}
+
+.aero-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 164, 239, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    filter: brightness(1.1);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60vh;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 0.5em;
+    font-weight: 800;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #005c97, #363795);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #444;
+    margin-bottom: 2em;
+}
+
+/* --- GRID SYSTEM --- */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-floating {
+    width: 64px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.15));
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* --- TYPOGRAPHY UTILS --- */
+h2,
+h3 {
+    color: var(--text-main);
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* --- CHATBOT CUSTOM --- */
+.chatbot-container {
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chatbot-header {
+    background: linear-gradient(180deg, rgba(0, 164, 239, 0.9) 0%, rgba(0, 164, 239, 0.7) 100%);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.chatbot-avatar {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.message {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    animation: messageSlideIn 0.3s ease;
+}
+
+@keyframes messageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-avatar {
+    width: 35px;
+    height: 35px;
+    background: rgba(0, 164, 239, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.user-message .message-avatar {
+    background: rgba(135, 201, 52, 0.2);
+}
+
+.message-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px 18px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.user-message {
+    flex-direction: row-reverse;
+}
+
+.user-message .message-content {
+    background: linear-gradient(135deg, rgba(135, 201, 52, 0.9) 0%, rgba(135, 201, 52, 0.7) 100%);
+    color: white;
+}
+
+.chatbot-input-area {
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 12px 18px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.chat-input:focus {
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 164, 239, 0.2);
+}
+
+.chat-send-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #66ccff 0%, #0066cc 100%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.chat-send-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 164, 239, 0.4);
+}
+
+.chat-send-btn:active {
+    transform: scale(0.95);
+}
+
+.typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 12px 18px;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background: var(--aero-blue);
+    border-radius: 50%;
+    animation: typingBounce 1.4s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-10px);
+    }
+}
+
+/* --- FLOATING CTA --- */
+.floating-cta {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+}
+
+/* --- MUSIC PLAYER --- */
+.music-player-container {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1000;
+}
+
+.music-player {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    transition: all 0.3s ease;
+}
+
+.mini-btn {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+.music-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.music-title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--text-main);
+    white-space: nowrap;
+}
+
+.visualizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 10px;
+}
+
+.visualizer .bar {
+    width: 3px;
+    background: var(--aero-blue);
+    border-radius: 2px;
+    height: 100%;
+    animation: bar-pulse 1.2s infinite ease-in-out;
+}
+
+.visualizer .bar:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.visualizer .bar:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bar-pulse {
+
+    0%,
+    100% {
+        height: 20%;
+    }
+
+    50% {
+        height: 100%;
+    }
+}
+
+.music-player:not(.playing) .bar {
+    animation: none;
+    height: 20%;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .music-player-container {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .glass-bar {
+        padding: 10px 20px;
+        gap: 20px;
+    }
+
+    .nav-links {
+        display: none;
+        /* Mobile menu to be implemented if needed, or simple stack */
+    }
+}

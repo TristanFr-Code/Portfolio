@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HorizonWeb | Agence Web & IA - Périgueux & Bordeaux</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body class="frutiger-bg">
+
+    <svg class="svg-filters" style="display: none;">
+        <defs>
+            <filter id="liquid-filter">
+                <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="warp"></feTurbulence>
+                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="20" in="SourceGraphic" in2="warp">
+                </feDisplacementMap>
+            </filter>
+        </defs>
+    </svg>
+
+    <header class="liquid-nav-container">
+        <nav class="glass-bar" id="navBar">
+            <div class="logo">
+                <img src="assets/globe.png" alt="HorizonWeb Logo"
+                    style="height: 65px; vertical-align: middle; margin-right: 10px; filter: drop-shadow(0 0 5px rgba(255,255,255,0.8));">
+                HORIZON<span class="highlight">WEB</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Agence</a></li>
+                <li><a href="creation-web.html">Création Web</a></li>
+                <li><a href="solutions-ia.html">Solutions IA</a></li>
+                <li><a href="showcase.html">Réalisations</a></li>
+                <li><a href="credits.html">Crédits</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero glass-panel">
+            <div class="hero-content">
+                <h1>L'Agence IA & Web <br><span class="gradient-text">à Périgueux & Bordeaux</span></h1>
+                <p>Propulsez votre entreprise dans le futur numérique. Sites web "Wow" et automatisations intelligentes.
+                </p>
+                <div class="hero-actions">
+                    <a href="creation-web.html" class="aero-btn">Je veux un Site</a>
+                    <a href="solutions-ia.html" class="aero-btn" style="filter: hue-rotate(90deg);">Je veux de l'IA</a>
+                </div>
+            </div>
+
+            <div id="lottie-animation" class="hero-anim"></div>
+        </section>
+
+        <section class="glass-panel text-center">
+            <h2>L'Équipe HorizonWeb</h2>
+            <div class="grid-layout" style="margin-top: 30px;">
+                <div class="team-member">
+                    <!-- Images via UI Avatars for now, can be replaced -->
+                    <img src="https://ui-avatars.com/api/?name=Jules+Peyrus&background=00A4EF&color=fff&size=128"
+                        alt="Jules Peyrus" class="icon-floating" style="border-radius: 50%;">
+                    <h3>Jules Peyrus</h3>
+                    <p>CEO & Expert IA</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://ui-avatars.com/api/?name=Tristan+Franchesceti&background=87C934&color=fff&size=128"
+                        alt="Tristan Franchesceti" class="icon-floating" style="border-radius: 50%;">
+                    <h3>Tristan Franchesceti</h3>
+                    <p>CEO & Directeur Technique</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="glass-panel">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h2>Contactez-nous</h2>
+                <p>Parlez directement à notre IA ou appelez-nous.</p>
+                <p class="phone-number" style="font-size: 1.5rem; font-weight: bold; color: var(--aero-blue);">
+                    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" width="30"
+                        style="vertical-align: middle;">
+                    07 67 07 91 14
+                </p>
+            </div>
+
+            <div class="chatbot-container">
+                <div class="chatbot-header">
+                    <div class="chatbot-avatar">🤖</div>
+                    <div>
+                        <h3 style="margin: 0; font-size: 1.1rem;">Assistant IA HorizonWeb</h3>
+                        <p style="margin: 0; font-size: 0.85rem; opacity: 0.8;">En ligne</p>
+                    </div>
+                </div>
+                <div class="chatbot-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            Bonjour ! Je suis l'assistant virtuel d'HorizonWeb. Comment puis-je vous aider aujourd'hui ?
+                        </div>
+                    </div>
+                </div>
+                <div class="chatbot-input-area">
+                    <input type="text" id="chatInput" placeholder="Tapez votre message..." class="chat-input">
+                    <button id="chatSendBtn" class="chat-send-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="solutions-ia.html" class="aero-btn" style="padding: 10px 20px; font-size: 0.9rem;">
+            🤖 Démo IA
+        </a>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="bgMusic" loop>
+        <source src="assets/audio/bg-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Player -->
+    <div class="music-player-container">
+        <div class="music-player glass-panel" id="musicPlayer">
+            <button id="playPauseBtn" class="aero-btn mini-btn">▶</button>
+            <button id="nextTrackBtn" class="aero-btn mini-btn" title="Morceau suivant">⏭</button>
+            <div class="music-info">
+                <span class="music-title">Takeshi Abo - Lightgreen</span>
+                <div class="visualizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

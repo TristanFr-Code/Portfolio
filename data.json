@@ -1,0 +1,124 @@
+{
+  "agency": {
+    "name": "HorizonWeb",
+    "location": "Périgueux & Bordeaux",
+    "phone": "07 67 07 91 14",
+    "email": "contact@horizonweb.ai",
+    "description": "L'innovation web et IA au service de votre croissance locale."
+  },
+  "team": [
+    {
+      "name": "Jules Peyrus",
+      "role": "CEO & Co-founder",
+      "image": "https://ui-avatars.com/api/?name=Jules+Peyrus&background=00A4EF&color=fff"
+    },
+    {
+      "name": "Tristan Franchesceti",
+      "role": "CEO & Co-founder",
+      "image": "https://ui-avatars.com/api/?name=Tristan+Franchesceti&background=87C934&color=fff"
+    }
+  ],
+  "services": {
+    "web": {
+      "title": "Création Web",
+      "short_desc": "Sites vitrines & e-commerce",
+      "target": [
+        "Pizzerias",
+        "PME Locales",
+        "Artisans"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price": "990€",
+          "features": [
+            "Site Vitrine One-Page",
+            "Design Sur-mesure",
+            "Hébergement 1 an"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price": "1490€",
+          "features": [
+            "Site Multi-pages",
+            "SEO Optimisé",
+            "Formulaire de contact avancé"
+          ]
+        }
+      ]
+    },
+    "ia": {
+      "title": "Solutions IA",
+      "short_desc": "Chatbots & Automatisation",
+      "target": [
+        "Notaires",
+        "Dentistes",
+        "Agents Immobiliers"
+      ],
+      "features": [
+        "Chatbot 24/7",
+        "Prise de RDV automatique",
+        "Qualification de prospects",
+        "Connexion CRM"
+      ]
+    }
+  },
+  "showcase": [
+    {
+      "id": 1,
+      "title": "Pack Vitrine",
+      "type": "Site Web Professionnel",
+      "description": "Un site moderne et responsive pour présenter votre activité. Design sur-mesure, optimisé mobile et SEO local.",
+      "image": "assets/formules/frutiger_web.png"
+    },
+    {
+      "id": 2,
+      "title": "Pack Automatisation",
+      "type": "Site Web + Chatbot IA",
+      "description": "Votre site vitrine équipé d'un chatbot intelligent qui répond à vos clients 24h/24 et prend les commandes.",
+      "image": "assets/formules/frutiger_chatbot.png"
+    },
+    {
+      "id": 3,
+      "title": "Pack Business 360",
+      "type": "Site + Chatbot + Assistant Vocal",
+      "description": "La solution complète : site web, chatbot écrit ET assistant vocal IA pour ne rater aucun appel ni message.",
+      "image": "assets/formules/frutiger_business.png"
+    }
+  ],
+  "ia_formules": [
+    {
+      "id": 1,
+      "title": "Chatbot IA",
+      "type": "Assistant Écrit 24/7",
+      "description": "Un chatbot intelligent sur votre site qui répond instantanément à vos clients, prend les commandes et qualifie les prospects.",
+      "image": "assets/formules/frutiger_chatbot.png",
+      "icon": "💬"
+    },
+    {
+      "id": 2,
+      "title": "Assistant Vocal IA",
+      "type": "Standard Téléphonique Intelligent",
+      "description": "Ne ratez plus aucun appel ! Notre IA répond au téléphone, prend les messages et transfère les urgences.",
+      "image": "assets/formules/frutiger_vocal.png",
+      "icon": "🎙️"
+    },
+    {
+      "id": 3,
+      "title": "Agent Prospection",
+      "type": "Automatisation Commerciale",
+      "description": "Notre IA trouve et qualifie vos prospects automatiquement. Génération de leads sur pilote automatique.",
+      "image": "assets/formules/frutiger_prospect.png",
+      "icon": "🎯"
+    },
+    {
+      "id": 4,
+      "title": "Agent Prise de RDV",
+      "type": "Secrétariat Automatisé",
+      "description": "Automatisez votre agenda : notre IA gère les prises de rendez-vous, confirmations et rappels sans intervention humaine.",
+      "image": "assets/formules/frutiger_calendar.png",
+      "icon": "📅"
+    }
+  ]
+}

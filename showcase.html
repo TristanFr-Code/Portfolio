@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisations | HorizonWeb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="frutiger-bg">
+    <header class="liquid-nav-container">
+        <nav class="glass-bar" id="navBar">
+            <div class="logo">
+                <img src="assets/globe.png" alt="HorizonWeb Logo"
+                    style="height: 65px; vertical-align: middle; margin-right: 10px;">
+                HORIZON<span class="highlight">WEB</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Agence</a></li>
+                <li><a href="creation-web.html">Création Web</a></li>
+                <li><a href="solutions-ia.html">Solutions IA</a></li>
+                <li><a href="showcase.html" class="active">Réalisations</a></li>
+                <li><a href="credits.html">Crédits</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="glass-panel text-center">
+            <h1>Nos Formules <span class="highlight">Avantageuses</span></h1>
+            <p>Des packs complets pour booster votre activité avec le web et l'IA.</p>
+        </section>
+
+        <section id="showcase-grid" class="grid-layout">
+            <!-- Content will be loaded from JSON -->
+            <div class="card glass-panel">
+                <p>Chargement des projets...</p>
+            </div>
+        </section>
+
+        <!-- Section Formules IA -->
+        <section class="glass-panel text-center" style="margin-top: 40px;">
+            <h2>Solutions <span class="highlight">IA Seules</span></h2>
+            <p>Automatisez votre activité sans refaire votre site web.</p>
+        </section>
+
+        <section id="ia-formules-grid" class="grid-layout">
+            <!-- Content will be loaded from JSON -->
+            <div class="card glass-panel">
+                <p>Chargement des formules IA...</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Audio Elements -->
+    <audio id="bgMusic" loop>
+        <source src="assets/audio/bg-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Player -->
+    <div class="music-player-container">
+        <div class="music-player glass-panel" id="musicPlayer">
+            <button id="playPauseBtn" class="aero-btn mini-btn">▶</button>
+            <button id="nextTrackBtn" class="aero-btn mini-btn" title="Morceau suivant">⏭</button>
+            <div class="music-info">
+                <span class="music-title">Takeshi Abo - Lightgreen</span>
+                <div class="visualizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

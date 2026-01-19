@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création Web | HorizonWeb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="frutiger-bg">
+    <header class="liquid-nav-container">
+        <nav class="glass-bar" id="navBar">
+            <div class="logo">
+                <img src="assets/globe.png" alt="HorizonWeb Logo"
+                    style="height: 65px; vertical-align: middle; margin-right: 10px;">
+                HORIZON<span class="highlight">WEB</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Agence</a></li>
+                <li><a href="creation-web.html" class="active">Création Web</a></li>
+                <li><a href="solutions-ia.html">Solutions IA</a></li>
+                <li><a href="showcase.html">Réalisations</a></li>
+                <li><a href="credits.html">Crédits</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="glass-panel text-center">
+            <h1>Création de Sites Web <span class="highlight">Ultra-Rapides</span></h1>
+            <p>Pour Pizzerias, PME locales, Coiffeurs et Artisans. Votre présence en ligne en moins de 7 jours, à <em
+                    style="opacity: 0.85;">tarifs accessibles</em>.</p>
+        </section>
+
+        <section class="grid-layout">
+            <div class="card glass-panel">
+                <div style="font-size: 3rem; margin-bottom: 20px;">🍕</div>
+                <h3>Pizzerias &amp; Restauration</h3>
+                <p>Menu digital, photos alléchantes et bouton d'appel direct.</p>
+                <ul style="text-align: left; margin-bottom: 20px;">
+                    <li>Design "Wow" appétissant</li>
+                    <li>Carte mobile-first</li>
+                    <li>Lien Google Maps</li>
+                    <li>🤖 Chatbot IA pour prendre les commandes</li>
+                    <li>Front-end &amp; Back-end complets</li>
+                </ul>
+                <a href="index.html#contact" class="aero-btn">Commander mon site</a>
+            </div>
+
+            <div class="card glass-panel">
+                <div style="font-size: 3rem; margin-bottom: 20px;">🏗️</div>
+                <h3>Artisans &amp; PME</h3>
+                <p>Montrez vos réalisations et recevez des devis automatiquement.</p>
+                <ul style="text-align: left; margin-bottom: 20px;">
+                    <li>Portfolio de chantiers</li>
+                    <li>Formulaire de devis</li>
+                    <li>Référencement local (SEO)</li>
+                    <li>🤖 Chatbot IA pour vos clients</li>
+                    <li>Front-end &amp; Back-end complets</li>
+                </ul>
+                <a href="index.html#contact" class="aero-btn">Demander un devis</a>
+            </div>
+
+            <div class="card glass-panel">
+                <div style="font-size: 3rem; margin-bottom: 20px;">💇</div>
+                <h3>Coiffeurs &amp; Services</h3>
+                <p>Attirez de nouveaux clients et gérez vos rendez-vous en ligne.</p>
+                <ul style="text-align: left; margin-bottom: 20px;">
+                    <li>Galerie de réalisations</li>
+                    <li>Système de prise de RDV</li>
+                    <li>Présentation de vos prestations</li>
+                    <li>🤖 Chatbot IA pour répondre aux clients</li>
+                    <li>Front-end &amp; Back-end complets</li>
+                </ul>
+                <a href="index.html#contact" class="aero-btn">Créer mon site</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="solutions-ia.html" class="aero-btn" style="padding: 10px 20px; font-size: 0.9rem;">
+            🤖 Démo IA
+        </a>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="bgMusic" loop>
+        <source src="assets/audio/bg-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Player -->
+    <div class="music-player-container">
+        <div class="music-player glass-panel" id="musicPlayer">
+            <button id="playPauseBtn" class="aero-btn mini-btn">▶</button>
+            <button id="nextTrackBtn" class="aero-btn mini-btn" title="Morceau suivant">⏭</button>
+            <div class="music-info">
+                <span class="music-title">Takeshi Abo - Lightgreen</span>
+                <div class="visualizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
